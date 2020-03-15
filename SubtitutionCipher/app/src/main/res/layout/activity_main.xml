@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtitusi Cipher Sederhana"
+        android:layout_centerHorizontal="true"
+        android:textSize="27sp"
+        android:padding="@dimen/padding"/>
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Text Here . . ."
+        android:layout_below="@id/judul"
+        android:padding="@dimen/padding"/>
+    <EditText
+        android:id="@+id/inputKey"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul"
+        android:layout_toRightOf="@+id/inputText"
+        android:padding="@dimen/padding"
+        android:hint="Key"/>
+    <Button
+        android:id="@+id/buttonEncrypt"
+        android:padding="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="encrypt!"
+        android:layout_below="@id/judul"
+        android:layout_toRightOf="@id/inputKey"
+        android:onClick="encr"/>
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputText"
+        android:padding="@dimen/padding"
+        android:text="test"/>
+
+    <Button
+        android:id="@+id/buttonDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonEncrypt"
+        android:layout_marginLeft="216dp"
+        android:padding="@dimen/padding"
+        android:layout_toRightOf="@id/output"
+        android:text="Decrypt!"
+        android:onClick="decr"/>
+
+</RelativeLayout>
